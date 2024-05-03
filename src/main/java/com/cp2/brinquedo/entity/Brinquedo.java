@@ -4,11 +4,13 @@ import jakarta.persistence.*;
 
 import java.math.BigDecimal;
 
+import static jakarta.persistence.GenerationType.SEQUENCE;
+
 @Entity
 @Table(name ="cp_brinquedo")
 public class Brinquedo {
- @Id
- @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
+    @GeneratedValue(strategy= SEQUENCE)
     private Long id;
 
     private String nome;
